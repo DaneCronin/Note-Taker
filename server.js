@@ -1,6 +1,9 @@
 const express = require('express');
 const fs = require('fs');
 const path = require("path");
+const uuid = require('uuid');
+
+
 
 
 //Setup Express app/initiate server
@@ -9,7 +12,7 @@ const PORT = process.env.PORT || 3001;
 
 //Express.js middleware that instructs server to make front end files available
 app.use(express.static('public'));
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 })
 app.get('/notes', (req, res) => {
@@ -23,15 +26,12 @@ app.get("/notes", (req, res) => {
     res.sendFile(path.join(__dirname, "./public/notes.html"));
 });
 
-//Wildcard Route to catch unintentional routes
+//Wildcard Route to catch unintentional routes and return index
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
-//GET route to connect server with API to index.html
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-})
+
 
 
 
