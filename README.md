@@ -22,6 +22,7 @@
   *Instructions and examples for use:*
 
   Visit deployed site on Heroku listed below:
+  https://peaceful-chamber-15308.herokuapp.com
 
   ## Contributing
   *Please follow these guidelines if you would like to contribute:*
