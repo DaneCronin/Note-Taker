@@ -9,34 +9,27 @@ const uuid = require('uuid');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-//Parse(convert) incoming POST data string or array data
-app.use(express.urlencoded({ extended : true}));
 //Parse(convert) incoming JSON data
 app.use(express.json());
+//Parse(convert) incoming POST data string or array data
+app.use(express.urlencoded({ extended : true}));
+
 
 //Express.js middleware that instructs server to make front end files available
 app.use(express.static('public'));
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-});
-app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/notes.html'));
-});
+
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, './public/index.html'));
+// });
+// app.get('/notes', (req, res) => {
+//     res.sendFile(path.join(__dirname, './public/notes.html'));
+// });
 
 
 
 
-//HTML paths
-// RETURN the contents at `notes.html `
-app.get("/notes", (req, res) => {
-    const notes = noteData
-    res.sendFile(path.join(__dirname, "./public/notes.html"));
-});
 
-//Wildcard Route to catch unintentional routes and return index
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-});
+
 
 
 //API routes to Get/Post
@@ -72,6 +65,19 @@ app.post('/api/notes', (req, res) => {
 
 });
 
+//Delete Notes
+
+
+//HTML paths
+// RETURN the contents at `notes.html `
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/notes.html"));
+});
+
+//Wildcard Route to catch unintentional routes and return index
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
 
 
 
