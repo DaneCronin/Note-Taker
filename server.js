@@ -65,7 +65,6 @@ app.post('/api/notes', (req, res) => {
 
 });
 
-//Delete Notes
 
 
 //HTML paths
@@ -80,6 +79,7 @@ app.get('*', (req, res) => {
 });
 
 
+//Delete Notes
 
 
 
