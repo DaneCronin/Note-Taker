@@ -11,12 +11,12 @@
   * [Questions?](#questions)
 
   ## Description
-   create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
+    Note Taker is an application that can be used to write and save notes. This application was built using an Express.js back-end and will save and retrieve note data from a JSON file.
 
   ## Installation
   *Steps required to install project and how to get application running*
   
-  Install all necessary npm's by running "npm install" in the command-line. The application may be launched from the command-line by running "npm start."
+  Clone the repository to your local development environment. Install all necessary npm's by running "npm install" in the command-line. The application may be launched from the command-line by running "npm start."
 
   ## Usage
   *Instructions and examples for use:*
@@ -30,12 +30,12 @@
   ## Contributing
   *Please follow these guidelines if you would like to contribute:*
 
-  please see contact information follow install instructions
+  please see contact information and follow install instructions
 
   ## Tests
   *Tests for application and how to run them:*
 
-  na
+  There are currently no tests for this application.
 
   ## License
   
